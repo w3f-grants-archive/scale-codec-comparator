@@ -197,7 +197,7 @@ pub extern "C" fn fixU32_decode(raw: *const libc::c_char) -> *mut u32 {
     std::mem::forget(u32_vec);
     ptr
 }
-// try again
+
 #[no_mangle]
 pub extern "C" fn fixU32_encode(ptr: *const u32, length: libc::size_t) -> *const libc::c_char {
     assert!(!ptr.is_null());
