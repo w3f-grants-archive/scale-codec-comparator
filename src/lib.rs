@@ -211,7 +211,7 @@ pub extern "C" fn fixU32_encode(ptr: *const u32, length: libc::size_t) -> *const
     CString::new(hex::encode(arr.encode())).unwrap().into_raw()
 }
 
-// test
+
 #[no_mangle]
 pub extern "C" fn vec_u32_encode(ptr: *const u32, length: usize) -> *const libc::c_char {
     assert!(!ptr.is_null());
