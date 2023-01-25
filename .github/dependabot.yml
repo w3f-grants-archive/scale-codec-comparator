@@ -1,0 +1,75 @@
+version: 2
+updates:
+  - package-ecosystem: 'npm'
+    directory: '/polkadot-js'
+    schedule:
+      interval: 'daily'
+    target-branch: 'main'
+    allow:
+      - dependency-name: '@polkadot/api'
+      - dependency-name: '@polkadot/types-codec'
+
+  - package-ecosystem: 'npm'
+    directory: '/as-scale-codec-wasm'
+    schedule:
+      interval: 'daily'
+    target-branch: 'main'
+    allow:
+      - dependency-name: 'as-scale-codec'
+
+  - package-ecosystem: 'npm'
+    directory: '/scale-codec-js-library'
+    schedule:
+      interval: 'daily'
+    target-branch: 'main'
+    allow:
+      - dependency-name: '@scale-codec/core'
+      - dependency-name: '@scale-codec/definition-runtime'
+
+  - package-ecosystem: 'npm'
+    directory: '/scale-ts'
+    schedule:
+      interval: 'daily'
+    target-branch: 'main'
+    allow:
+      - dependency-name: 'scale-ts'
+
+  - package-ecosystem: 'gomod'
+    directory: '/scale.go'
+    schedule:
+      interval: 'daily'
+    target-branch: 'main'
+    allow:
+      - dependency-name: 'github.com/itering/scale.go'
+
+  - package-ecosystem: 'gomod'
+    directory: '/go-substrate-rpc-client'
+    schedule:
+      interval: 'daily'
+    target-branch: 'main'
+    allow:
+      - dependency-name: 'github.com/centrifuge/go-substrate-rpc-client'
+
+  - package-ecosystem: 'pip'
+    directory: '/py-scale-codec'
+    schedule:
+      interval: 'daily'
+    target-branch: 'main'
+    allow:
+      - dependency-name: 'scalecodec'
+
+  - package-ecosystem: 'bundler'
+    directory: '/scale.rb'
+    schedule:
+      interval: 'daily'
+    target-branch: 'main'
+    allow:
+      - dependency-name: 'scale.rb'
+
+  - package-ecosystem: 'composer'
+    directory: '/php-scale-codec'
+    schedule:
+      interval: 'daily'
+    target-branch: 'main'
+    allow:
+      - dependency-name: 'gmajor/substrate-codec-php'
